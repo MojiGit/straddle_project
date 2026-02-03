@@ -1,0 +1,11 @@
+Lognormal distribution
+Inputs:
+    Spot
+    Volatility
+    Time to expiry
+
+Do NOT:
+    Use historical returns
+    Add jumps
+    Add skew/smile
+    Overfit

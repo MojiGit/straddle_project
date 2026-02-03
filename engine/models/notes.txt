@@ -1,0 +1,6 @@
+Payoff = max(ST - K, 0) + max(K - ST, 0) - premium
+
+Inputs:
+    Strike (K)
+    Premium (call + put)
+    Terminal price (ST)

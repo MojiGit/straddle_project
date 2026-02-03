@@ -1,0 +1,7 @@
+Breakeven points:
+Lower = K - premium
+Upper = K + premium
+
+Failure probability:
+P( loss ) = %
+of ST where payoff < 0

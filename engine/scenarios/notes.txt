@@ -1,0 +1,8 @@
+Generate N terminal prices
+One volatility per scenario
+Same random seed per scenario (important!)
+
+Example:
+    Low: IV − 20%
+    Base: Current IV
+    High: IV + 20%
