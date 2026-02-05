@@ -1,11 +1,13 @@
-import { straddlePayoff } from "./strategies/straddle.js";
-import { failureProbability } from "./utils/stats.js";
+import { runStraddleSimulation } from "./index.js";
 
-// Simple payoff checks
-console.log(straddlePayoff(100, 100, 10)); // -10
-console.log(straddlePayoff(120, 100, 10)); // +10
-console.log(straddlePayoff(80, 100, 10));  // +10
+const result = runStraddleSimulation({
+  spot: 100,
+  strike: 100,
+  premium: 10,
+  timeToExpiry: 30 / 365,
+  volatility: 0.6
+});
 
-// Failure probability check
-const payoffs = [-10, -5, 0, 10, 20];
-console.log(failureProbability(payoffs)); // 0.4
+console.log("Breakevens:", result.breakevens);
+console.log("Failure probability:", result.failureProbability);
+console.log("PNL samples:", result.pnl.payoffs.slice(0, 10));
