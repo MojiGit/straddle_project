@@ -23,7 +23,7 @@
 }
 */
 
-straddlePayoff = (st, strike, premium) => {
+export function straddlePayoff(st, strike, premium){
   return Math.max(st - strike, 0) + Math.max(strike - st, 0) - premium; //this is assuming a total premium paid
 }
 
